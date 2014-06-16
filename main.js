@@ -25,7 +25,11 @@ define(function() {
         save(prevDoc);
     });
     
-    $(window).on('blur', function() {
-        save(DocumentManager.getCurrentDocument());
+    var secondBlur = false;
+    $(window).on('blur', function(e) {
+        if(!secondBlur) {
+            save(DocumentManager.getCurrentDocument());
+        }
+        secondBlur = !secondBlur;
     });
 });
