@@ -7,11 +7,18 @@
 define(function() {
     'use strict';
     
-    var DocumentCommandHandlers = brackets.getModule("document/DocumentCommandHandlers"),
+    var CommandManager = brackets.getModule("command/CommandManager"),
+        Commands = brackets.getModule("command/Commands"),
         DocumentManager = brackets.getModule("document/DocumentManager");
     
+    /**
+     * Saves a document.
+     * @param {Document} doc
+     */
     function save(doc) {
-    
+        if(doc && !doc.isUntitled() && doc.isDirty) {
+            CommandManager.execute(Commands.FILE_SAVE, {commandData: doc});
+        }
     }
     
     $(DocumentManager).on('currentDocumentChange', function(e, currDoc, prevDoc) {
