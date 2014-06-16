@@ -17,7 +17,7 @@ define(function() {
      */
     function save(doc) {
         if(doc && !doc.isUntitled() && doc.isDirty) {
-            CommandManager.execute(Commands.FILE_SAVE, {commandData: doc});
+            CommandManager.execute(Commands.FILE_SAVE, {doc: doc});
         }
     }
     
