@@ -2,7 +2,7 @@
     "name": "zeid.autosave-on-view-change",
     "title": "Autosave on View Change",
     "description": "Autosave current file when changing files or on window blur.",
-    "version": "0.2.0",
+    "version": "1.0.1",
     "author": "Joshua Zeid <jrzeid23+github@gmail.com> (https://github.com/marcantony)",
 	"homepage": "https://github.com/marcantony/brackets-autosave-on-view-change",
     "license": "MIT",
