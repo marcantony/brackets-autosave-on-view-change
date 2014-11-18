@@ -27,9 +27,6 @@ define(function() {
     
     var secondBlur = false;
     $(window).on('blur', function(e) {
-        if(!secondBlur) {
-            save(DocumentManager.getCurrentDocument());
-        }
-        secondBlur = !secondBlur;
+        save(DocumentManager.getCurrentDocument());
     });
 });
