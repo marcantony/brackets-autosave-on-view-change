@@ -9,7 +9,8 @@ define(function() {
     
     var CommandManager = brackets.getModule("command/CommandManager"),
         Commands = brackets.getModule("command/Commands"),
-        DocumentManager = brackets.getModule("document/DocumentManager");
+        DocumentManager = brackets.getModule("document/DocumentManager"),
+        EditorManager = brackets.getModule("editor/EditorManager");
     
     /**
      * Saves a document.
@@ -21,12 +22,11 @@ define(function() {
         }
     }
     
-    $(DocumentManager).on('currentDocumentChange', function(e, currDoc, prevDoc) {
+    EditorManager.on('activeEditorChange', function(e, currDoc, prevDoc) {
         save(prevDoc);
     });
     
-    var secondBlur = false;
-    $(window).on('blur', function(e) {
+    $(window).on('blur', function() {
         save(DocumentManager.getCurrentDocument());
     });
 });
