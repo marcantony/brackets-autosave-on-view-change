@@ -1,5 +1,5 @@
-Please note: I am no longer updating this repository.
-Use https://github.com/martypenner/brackets-autosave-files-on-window-blur instead.
+This is an extension for the [Brackets open-source code editor] (http://brackets.io/) to add smart saving functionality. The extension uses JavaScript and the [Brackets API] (http://brackets.io/docs/current/modules/brackets.html) to save documents automatically when switching to another file or application. 
 
----
-An extension for the Brackets code editor to add smart saving functionality. Saves documents automatically when switching to another document or when switching focus from Brackets to another application.
+
+
+This project is no longer actively being worked on as I no longer use the editor. If you are looking for a more up-to-date solution to this issue, consider looking [here] (https://github.com/martypenner/brackets-autosave-files-on-window-blur).
